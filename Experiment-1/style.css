@@ -1,0 +1,18 @@
+form {
+  background-color: antiquewhite;
+  width: 300px;
+  height: 250px;
+  border: 20px ridge hsl(0, 12%, 51%);
+  border-radius: 10px;
+  padding: 50px;
+  margin: 100px ;
+  display: flex;
+    flex-direction: column;
+}
+body{
+    background-color: rgb(124, 111, 93);
+    display: flex ; 
+    flex-direction: column;
+    justify-content: space-around; 
+   
+}
