@@ -1,0 +1,83 @@
+DYNAMIC PRODUCT FILTER WITH DROPDOWN USING JAVASCRIPT DOM MANIPULATION
+
+1. FIELD: Dropdown (Category Filter)
+Requirement:
+- Required field (must have a value).
+- Options include: "All", "Electronics", "Clothing", "Books".
+- Based on the selected option, the product list dynamically updates.
+
+VALID INPUTS:
+- "all" → Displays all products.
+- "electronics" → Displays only products tagged with data-category="electronics".
+- "clothing" → Displays only products tagged with data-category="clothing".
+- "books" → Displays only products tagged with data-category="books".
+
+INVALID INPUTS:
+- "toys" (or any category not in the dropdown) → No product should appear.
+- Empty value → No products displayed (invalid state, should be avoided).
+
+2. FIELD: Product Items
+Requirement:
+- Each product is represented by a <div class="product-item">.
+- Must contain a data-category attribute with a valid category.
+- Should be visible only if it matches the selected dropdown category.
+
+VALID INPUTS (Examples from given list):
+- <div class="product-item" data-category="clothing">T-Shirt</div>
+- <div class="product-item" data-category="electronics">Smartphone</div>
+- <div class="product-item" data-category="books">Novel</div>
+
+INVALID INPUTS:
+- Missing data-category → Product cannot be filtered properly.
+- Wrong data-category (e.g., "furniture") → Product will never display with current dropdown options.
+
+3. FUNCTIONALITY: Filtering Logic
+Requirement:
+- Filtering must happen dynamically (without page reload).
+- JS listens to the "change" event on the dropdown.
+- If "all" is selected → show all products.
+- Otherwise → show only products matching the chosen category.
+
+EXPECTED BEHAVIOR:
+- Selecting "clothing" → only T-Shirt and Jeans appear.
+- Selecting "electronics" → only Headphones and Smartphone appear.
+- Selecting "books" → only Novel and Cookbook appear.
+- Selecting "all" → all six products appear.
+
+CSS STYLING BREAKDOWN
+
+1. ELEMENT: body
+Purpose: Sets overall font and spacing.
+- font-family: Arial, sans-serif; → Clean, readable font.
+- margin: 20px; → Creates space from browser edges.
+
+2. ELEMENT: h1
+Purpose: Page heading.
+- text-align: left; → Keeps heading aligned to the left.
+
+3. ELEMENT: .product
+Purpose: Styles the filter dropdown section.
+- margin: 20px; → Provides spacing around filter area.
+
+4. ELEMENT: .product-list
+Purpose: Container for all product items.
+- display: flex; → Flexible layout.
+- flex-direction: column; → Arranges items vertically.
+- flex-wrap: wrap; → Allows wrapping if resized.
+- justify-content: space-around; → Spreads items evenly.
+
+5. ELEMENT: .product-item
+Purpose: Styles individual product blocks.
+- border: 2px solid #ccc; → Light grey border for separation.
+- border-radius: 5px; → Rounded corners.
+- padding: 10px; → Internal spacing for text.
+- margin: 5px; → Spacing between items.
+- width: 1370px; → Full-width block (adjustable).
+- text-align: left; → Aligns product name to the left.
+
+LEARNING OUTCOMES:
+1. How to use JavaScript DOM Manipulation for dynamic UI changes.
+2. How to implement a filter system using dropdown menus.
+3. How to use data attributes (data-category) for filtering.
+4. How to apply event handling ("change" event) in JavaScript.
+5. How to structure CSS for layout and styling of dynamic lists.
