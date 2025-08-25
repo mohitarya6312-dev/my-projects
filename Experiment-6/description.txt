@@ -1,0 +1,23 @@
+HTML (Structure):
+
+The HTML file defines the layout for the drawing tool.
+A container element holds the drawing area of the tool.
+Inside the container, there is a heading labeled "SVG Drawing Tool".
+An <svg> element acts as the canvas where users can draw using the mouse.
+HTML is solely responsible for displaying the page structure, including the title, heading, and drawing canvas.
+CSS (Styling):
+
+CSS is used to style the page and the drawing area.
+The body has a simple, clean font style.
+The container has a border, fixed width, and padding to organize the drawing tool neatly.
+The SVG drawing canvas has its own border, a light background color, fixed dimensions (560×400 pixels), and a crosshair cursor to indicate that drawing is possible.
+CSS only handles the visual appearance and layout of the drawing tool.
+
+JavaScript (Functionality):
+
+JavaScript provides the interactive functionality of the drawing tool.
+It listens for mouse events such as mousedown, mousemove, and mouseup.
+When the mouse is pressed (mousedown), drawing starts and a new SVG path is initiated.
+As the mouse moves (mousemove), line segments are continuously added to the path to create freehand drawing.
+When the mouse is released (mouseup), drawing stops.
+JavaScript is responsible for enabling users to draw inside the SVG canvas interactively.
