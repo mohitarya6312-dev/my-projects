@@ -1,0 +1,81 @@
+## PROJECT OVERVIEW:
+
+---
+
+This React project demonstrates creating a simple interface to display a list of products using reusable components and props. The application highlights component composition, data passing via props, and rendering lists dynamically with inline styling.
+
+## TECHNICAL STACK:
+
+---
+
+* React (Vite scaffolding)
+* JavaScript (ES Modules)
+* ESLint (basic configuration)
+
+## PROJECT STRUCTURE:
+
+---
+
+src/
+├── App.jsx              # Application entry point, renders product list
+├── App.css              # Basic styling file
+├── productcard.jsx      # Defines ProductCard (UI) and ProductsList (list renderer)
+└── main.jsx             # React DOM rendering (Vite boilerplate)
+
+## KEY FEATURES:
+
+---
+
+1. PRODUCT DISPLAY
+
+   * Displays a list of products in card format
+   * Uses reusable ProductCard component
+   * Props used to pass product data to each card
+   * Inline styling for quick design presentation
+
+2. COMPONENT COMPOSITION
+
+   * Parent-child relationship using ProductsList and ProductCard
+   * Clear separation of concerns for easy scalability
+
+3. LIST RENDERING
+
+   * Products displayed using Array.map
+   * Dynamic rendering without duplication
+
+## COMPONENT ARCHITECTURE:
+
+---
+
+* REUSABLE COMPONENTS: ProductCard designed for reuse
+* PROPS PASSING: Parent sends product details to child
+* MODULARITY: Clean separation of product display and list rendering
+* INLINE STYLING: Used for simplicity and quick setup
+
+## HOW TO RUN:
+
+---
+
+1. Navigate to the project folder
+2. Run: npm install (to install dependencies)
+3. Run: npm run dev (to start development server)
+4. Open the browser at the terminal-provided URL (e.g., [http://localhost:5173](http://localhost:5173))
+
+## LEARNING OBJECTIVES ACHIEVED:
+
+---
+
+* Building reusable React components
+* Passing and handling props
+* Rendering lists dynamically with map()
+* Basic inline styling in React
+* Understanding component composition
+
+## FUTURE ENHANCEMENTS:
+
+---
+
+* Load products dynamically from API or JSON file
+* Add search, filter, and sorting functionality
+* Replace inline styles with CSS modules or frameworks
+* Add interactivity like "Add to Cart" or stock indicators
