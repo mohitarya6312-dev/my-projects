@@ -1,0 +1,16 @@
+Person Class Hierarchy with Student and Teacher Subclasses
+Objective
+The objective of this experiment is to demonstrate the concept of inheritance in object-oriented programming using modern JavaScript (ES6) classes. By creating a base class and specialized subclasses, we will see how code can be reused and extended to model real-world relationships, building a solid foundation for more complex programming tasks.
+
+Task Description
+Create a Base Class: Define a Person class with name and age properties and a displayInfo() method to print this information.
+
+Create Subclasses:
+
+Create a Student class that extends the Person class. It should have an additional course property.
+
+Create a Teacher class that extends the Person class. It should have an additional subject property.
+
+Method Overriding: Implement a displayInfo() method in both the Student and Teacher subclasses. These methods should call the parent class's displayInfo() method using super.displayInfo() before adding their own unique information (course or subject).
+
+Demonstration: Create instances of both Student and Teacher and call their respective displayInfo() methods to show the complete, specialized information for each.
