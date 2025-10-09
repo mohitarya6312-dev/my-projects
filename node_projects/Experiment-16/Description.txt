@@ -1,0 +1,53 @@
+EXPERIMENT 16: Bank Account Transfer System
+
+Project Type: Node.js REST API
+Technologies Used: Express.js, MongoDB, Mongoose
+
+Objective:
+To design a secure and efficient banking system that supports reliable money transfers with proper validation and rollback features.
+
+CORE FEATURES
+- Creation and management of unique user accounts.
+- Secure fund transfer between different users.
+- Real-time balance verification to prevent overdrafts.
+- Rollback process in case any part of the transaction fails.
+- Comprehensive error handling for all banking operations.
+
+API ENDPOINTS
+- GET /api/health → Checks API health status.
+- POST /api/users → Creates a new user account.
+- GET /api/users → Displays all registered user accounts.
+- POST /api/transfer → Handles money transfer between users.
+- GET /api/balance/:accountNumber → Returns the balance for a specific account.
+
+KEY IMPLEMENTATION DETAILS
+- Transfers are executed in order — debit first, then credit.
+- If any step fails, the system automatically rolls back the transaction.
+- Strict validation for account numbers and transfer amounts.
+- Prevents transactions between the same account or with negative values.
+
+TESTING
+- Contains detailed test cases with sample user data.
+- Tests both successful transfers and insufficient balance scenarios.
+- Validates proper error handling for invalid inputs and non-existent accounts.
+
+SECURITY MEASURES
+- Confirms adequate balance before initiating transfers.
+- Ensures both sender and receiver accounts exist.
+- Applies input sanitization and strict validation rules.
+- Maintains consistent data integrity using rollback procedures.
+
+FILES
+- server.js: Main entry point for the API server.
+- models/User.js: Defines the user schema and account model.
+- test-api.js: Includes automated API test scripts.
+- Bank-Transfer-API.postman_collection.json: Postman collection for manual endpoint testing.
+
+USAGE
+1. Start the MongoDB service.
+2. Run the project with: npm run dev
+3. Server will be available at: http://localhost:3000
+4. Execute test cases using: npm test
+
+SUMMARY
+This experiment illustrates the implementation of a secure banking transaction system using Node.js and MongoDB. It focuses on application-level validation, rollback logic, and error handling to achieve safe, consistent, and reliable fund transfers — even without database-level transaction features.
