@@ -1,0 +1,29 @@
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #f4f6f8;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-section, .right-section {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.left-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,5 @@
+[
+  { "name": "Laptop", "price": 65000 },
+  { "name": "Headphones", "price": 3000 },
+  { "name": "Keyboard", "price": 1200 }
+]
