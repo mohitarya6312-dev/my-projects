@@ -1,0 +1,70 @@
+Project Title: Real-Time Feature Flag Management Console (MERN + Redis)
+
+Overview:
+A real-time feature flag management system built using the MERN stack with Redis. 
+It enables dynamic control over application features through an admin dashboard, ensuring scalability, 
+low latency, and consistent updates across distributed environments.
+
+Core Components:
+
+1. Backend (Node.js + Express + Redis + MongoDB)
+   - Central API for managing, evaluating, and distributing feature flags.
+   - Redis is used for caching and Pub/Sub messaging to sync updates across nodes.
+   - MongoDB serves as the primary data source for flag definitions, audit logs, and rule histories.
+
+2. Frontend (React + Tailwind + Axios)
+   - Admin dashboard for creating, editing, and managing feature flags.
+   - Allows defining rollout strategies, simulating evaluations, and managing feature states (draft/active/archived).
+   - Includes role-based access control and detailed activity auditing.
+
+3. Evaluation SDK / Middleware
+   - Lightweight library for deterministic evaluations using hash-based rollout mechanisms.
+   - Provides resilience with a fallback to MongoDB when Redis is unavailable.
+
+Key Features:
+- Flag Models: Supports boolean and multivariate flags with metadata (name, owner, tags, description, lifecycle).
+- Targeting Rules: Environment scoping (dev/stage/prod), user attributes (role, plan, region), and percentage rollouts.
+- Low-Latency Distribution: Redis cache for hot reads and Pub/Sub for real-time updates with versioning and TTL.
+- Admin UI: Create/edit flags, define rollout rules, simulate evaluations, and trigger kill switches.
+- Audit & Governance: Immutable logs for all flag changes with user, timestamp, and diff view tracking.
+- Observability: Metrics for evaluation rates, cache hits/misses, error tracking, and JSON export of configurations.
+- Security: JWT authentication, input sanitization, scoped secrets, and ETag-based client caching.
+- APIs: REST endpoints for fetching, evaluating, and mutating flags, including batch and streaming operations.
+- Resilience & Testing: Rate limiting, MongoDB fallback, integration tests, and Docker Compose setup.
+
+Technical Stack:
+Frontend: React, Tailwind CSS, Axios
+Backend: Node.js, Express.js
+Database: MongoDB
+Cache/Queue: Redis (Pub/Sub + Hot Cache)
+Authentication: JWT
+Containerization: Docker Compose
+Logging & Metrics: Winston, Morgan, Prometheus (optional)
+
+Project Architecture:
+React Admin UI → Express API Server → Redis (Pub/Sub) → MongoDB (Source of Truth)
+
+Security & Reliability:
+- JWT-based authentication with role-based permissions.
+- ETag headers for efficient client caching.
+- Input validation and sanitization using express-validator.
+- Automatic MongoDB fallback if Redis becomes unavailable.
+
+Deployment:
+- Ready for deployment using Docker Compose with:
+  - MongoDB
+  - Redis
+  - Express API
+  - React Admin UI
+- Supports .env configuration for environment variables and secrets.
+
+Future Enhancements:
+- Integration with OpenTelemetry for distributed tracing.
+- Advanced analytics with Grafana and Prometheus.
+- CLI-based flag management tool.
+- Multi-tenant, organization-level access support.
+
+Author:
+Mohit Kumar
+CSE - AI Student | Real-Time Systems & MERN Developer
+Project Codename: Nimbus-Flag Console
